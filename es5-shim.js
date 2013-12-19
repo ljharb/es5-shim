@@ -445,21 +445,19 @@ defineProperties(ArrayPrototype, {
         var object = toObject(this),
             self = splitString && isString(this) ? this.split('') : object,
             thisp = arguments[1],
-            i = -1,
             length = self.length >>> 0;
 
         // If no callback function or if callback is not a callable function
         if (!isFunction(fun)) {
-            throw new TypeError(); // TODO message
+            throw new TypeError(fun + " is not a function");
         }
 
-        while (++i < length) {
-            if (i in self) {
-                // Invoke the callback function with call, passing arguments:
-                // context, property value, property key, thisArg object
-                // context
+        for (var i = 0; i < length; i++) {
+            // Invoke the callback function with call, passing arguments:
+            // context, property value, property key, thisArg object
+            // context
+            if (i in self)
                 fun.call(thisp, self[i], i, object);
-            }
         }
     }
 }, !properlyBoxesContext(ArrayPrototype.forEach));
