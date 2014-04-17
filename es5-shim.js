@@ -183,10 +183,24 @@ var ToUint32 = function ToUint32(x) {
 // ========
 //
 
+function Empty() {}
+
+// ES-5 15.3.4.3
+// http://es5.github.io/#x15.3.4.3
+var applySupportsArrayLike = true;
+var arrayLike = {length: 0};
+try { Empty.apply(null, arrayLike); }
+catch (e) { applySupportsArrayLike = false; }
+if (!applySupportsArrayLike) {
+    var origApply = FunctionPrototype.apply;
+    FunctionPrototype.apply = function apply(context, args) {
+        if (isArguments(args)) { args = _Array_slice_.call(args); }
+        return origApply.call(this, context, args);
+    };
+}
+
 // ES-5 15.3.4.5
 // http://es5.github.com/#x15.3.4.5
-
-function Empty() {}
 
 defineProperties(FunctionPrototype, {
     bind: function bind(that) { // .length is 1
