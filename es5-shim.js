@@ -858,6 +858,15 @@ defineProperties(Date.prototype, {
     }
 }, hasNegativeDateBug);
 
+if (new Date(-3509827334573292).getMonth > 11) {
+    var originalDateMonth = Date.prototype.getMonth;
+    Date.prototype.getMonth = function getMonth() {
+        var month = originalDateMonth.call(this);
+
+        return month;
+    };
+}
+
 
 // ES5 15.9.5.44
 // http://es5.github.com/#x15.9.5.44
