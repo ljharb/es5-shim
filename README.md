@@ -34,7 +34,7 @@ simply `npm install` and `npm test`.
 ### Complete tests ###
 
 * Array.prototype.every ([standalone shim](https://www.npmjs.com/package/array.prototype.every))
-* Array.prototype.filter
+* Array.prototype.filter ([standalone shim](https://www.npmjs.com/package/array.prototype.filter))
 * Array.prototype.forEach ([standalone shim](https://www.npmjs.com/package/array.prototype.foreach))
 * Array.prototype.indexOf ([standalone shim](https://www.npmjs.com/package/array.prototype.indexof))
 * Array.prototype.lastIndexOf ([standalone shim](https://www.npmjs.com/package/array.prototype.lastindexof))
@@ -44,12 +44,12 @@ simply `npm install` and `npm test`.
 * Array.prototype.sort
 * Array.prototype.reduce ([standalone shim](https://www.npmjs.com/package/array.prototype.reduce))
 * Array.prototype.reduceRight ([standalone shim](https://www.npmjs.com/package/array.prototype.reduceright))
-* Array.prototype.push
+* Array.prototype.push ([standalone shim](https://www.npmjs.com/package/array.prototype.push))
 * Array.prototype.join
 * Array.prototype.splice ([standalone shim](https://www.npmjs.com/package/array.prototype.splice))
 * Array.isArray
-* Date.now
-* Date.prototype.toJSON
+* Date.now ([standalone shim](https://www.npmjs.com/package/date))
+* Date.prototype.toJSON ([standalone shim](https://www.npmjs.com/package/date))
 * Function.prototype.bind
     * :warning: Caveat: the bound function has a prototype property.
     * :warning: Caveat: bound functions do not try too hard to keep you
@@ -62,12 +62,12 @@ simply `npm install` and `npm test`.
 * Object.keys ([standalone shim](https://www.npmjs.com/package/object-keys))
 * String.prototype.split ([standalone shim](https://www.npmjs.com/package/string.prototype.split))
 * String.prototype.trim ([standalone shim](https://www.npmjs.com/package/string.prototype.trim))
-* String.prototype.lastIndexOf ([standalone shim](https://string.prototype.lastindexof))
+* String.prototype.lastIndexOf ([standalone shim](https://www.npmjs.com/package/string.prototype.lastindexof))
 * String.prototype.replace
     * Firefox (through v29) natively handles capturing groups incorrectly.
-* Date.parse (for ISO parsing)
-* Date.prototype.toISOString
-* parseInt
+* Date.parse (for ISO parsing) ([standalone shim](https://www.npmjs.com/package/date))
+* Date.prototype.toISOString ([standalone shim](https://www.npmjs.com/package/date))
+* parseInt ([standalone shim](https://www.npmjs.com/package/parseint))
 * parseFloat
 * Error.prototype.toString
 * Error.prototype.name
@@ -196,5 +196,5 @@ simply `npm install` and `npm test`.
 [downloads-url]: https://npm-stat.com/charts.html?package=es5-shim
 [codecov-image]: https://codecov.io/gh/es-shims/es5-shim/branch/main/graphs/badge.svg
 [codecov-url]: https://app.codecov.io/gh/es-shims/es5-shim/
-[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/es-shims/es5-shim
+[actions-image]: https://img.shields.io/github/check-runs/es-shims/es5-shim/master
 [actions-url]: https://github.com/es-shims/es5-shim/actions
